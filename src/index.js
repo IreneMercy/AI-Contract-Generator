@@ -1,6 +1,4 @@
 function displayStory(response) {
-  console.log(response.data);
-
   new Typewriter("#generated-story", {
     strings: response.data.answer,
     autoStart: true,
@@ -10,7 +8,6 @@ function displayStory(response) {
 
 function generateStory(event) {
   event.preventDefault();
-  //Build APi URl
   let userInstructions = document.querySelector("#chat-input");
   let apiKey = "b8a2a2of6ef0b2dad8384b77f37302t6";
   let context = `You are a sunday school teacher, and love to write short stories from the bible books to help kids understand better.
@@ -28,9 +25,7 @@ function generateStory(event) {
   let storyElement = document.querySelector("#generated-story");
   storyElement.classList.remove("hidden");
   storyElement.innerHTML = `Generating your story<span class="blink">🔵</span><span class="blink">🔵</span><span class="blink">🔵</span>`;
-  //Make a call to API
   axios.get(apiURL).then(displayStory);
-  //Display generated story
 }
 
 let storyFormElement = document.querySelector("#story-generator-form");
