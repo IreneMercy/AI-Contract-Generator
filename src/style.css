@@ -1,34 +1,44 @@
 body {
   margin: 0;
   padding: 0;
-
-  font-family: "Comic Sans MS", cursive sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Comic Sans MS", cursive, sans-serif;
   background: linear-gradient(
-    68.6deg,
-    rgb(252, 165, 241) 1.8%,
-    rgb(181, 255, 255) 100.5%
+    45deg,
+    #ff9a9e,
+    #fad0c4,
+    #fad0c4,
+    #fbc2eb,
+    #a6c1ee
   );
-  background-size: cover;
-  animation: gradientMove 5s infinite;
-  height: 100vh;
+  background-size: 400% 400%;
+  animation: gradientMove 8s ease infinite;
 }
+
 @keyframes gradientMove {
   0% {
-    background-position: 0% 0%;
+    background-position: 0% 50%;
   }
   50% {
-    background-position: 100% 100%;
+    background-position: 100% 50%;
   }
   100% {
-    background-position: 0% 0%;
+    background-position: 0% 50%;
   }
 }
+
 h1 {
   text-align: center;
 }
 footer {
   text-align: center;
   padding: 0 20px;
+}
+
+footer a {
+  color: #10b076;
 }
 .form-details {
   display: flex;
@@ -40,7 +50,7 @@ footer {
   align-items: center;
   border: 3px solid #caf9e8;
   border-radius: 30px;
-  padding: 10px ;
+  padding: 10px;
   width: 100%;
   max-width: 600px;
 }
@@ -53,7 +63,7 @@ footer {
   font-size: 14px;
 }
 #chat-input::placeholder {
-  font-family: "Comic Sans MS", cursive sans-serif;
+  font-family: "Comic Sans MS", cursive, sans-serif;
   color: #1b331c;
 }
 #container {
@@ -80,6 +90,8 @@ footer {
   width: 96%;
   border-right: 2px solid rgb(249, 147, 164);
   border-left: 2px solid rgb(249, 147, 164);
+  font-weight: 100;
+  font-size: 14px;
 }
 
 .hidden {

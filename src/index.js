@@ -14,17 +14,18 @@ function generateStory(event) {
   Your mission is to generate short stories, engaging, and kid-friendly story based on a Biblical book given by user instructions. Format the story as follows:
   
   1. Heading: Bold and clear title using strong HTML tags.
-  2. Quote the Bible Verse: Italicize using em HTML tags.
+  2. Quote the Bible Verse: Italicize using em and strong HTML tags.
   3. Story: Use p HTML tags for paragraphs. Ensure readability and avoid long blocks of text.
   4. Lessons Learned: List lessons using ul and li HTML tags.
   
-  Ensure proper spacing and formatting for easy readability.`;
+  Ensure proper spacing and formatting for easy readability.
+  Ensure that the story is NOT incomplete please. Thanks.`;
   let prompt = `User Instructions: Generate ${userInstructions.value}`;
   let apiURL = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
 
   let storyElement = document.querySelector("#generated-story");
   storyElement.classList.remove("hidden");
-  storyElement.innerHTML = `Generating your story<span class="blink">🔵</span><span class="blink">🔵</span><span class="blink">🔵</span>`;
+  storyElement.innerHTML = `Generating your story<span class="blink">🟢</span><span class="blink">🟢</span><span class="blink">🟢</span>`;
   axios.get(apiURL).then(displayStory);
 }
 
