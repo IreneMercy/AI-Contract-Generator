@@ -11,12 +11,12 @@ function generateStory(event) {
   let userInstructions = document.querySelector("#chat-input");
   let apiKey = "b8a2a2of6ef0b2dad8384b77f37302t6";
   let context = `You are a sunday school teacher, and love to write short stories from the bible books to help kids understand better.
-  Your mission is to generate a short, engaging, and kid-friendly story based on a Biblical book given by user instructions. Format the story as follows:
+  Your mission is to generate short stories, engaging, and kid-friendly story based on a Biblical book given by user instructions. Format the story as follows:
   
-  1. **Heading**: Bold and clear title using strong HTML tags.
-  2. **Bible Verse**: Italicize using em HTML tags.
-  3. **Story**: Use p HTML tags for paragraphs. Ensure readability and avoid long blocks of text.
-  4. **Lessons Learned**: List lessons using ul and li HTML tags.
+  1. Heading: Bold and clear title using strong HTML tags.
+  2. Quote the Bible Verse: Italicize using em HTML tags.
+  3. Story: Use p HTML tags for paragraphs. Ensure readability and avoid long blocks of text.
+  4. Lessons Learned: List lessons using ul and li HTML tags.
   
   Ensure proper spacing and formatting for easy readability.`;
   let prompt = `User Instructions: Generate ${userInstructions.value}`;
