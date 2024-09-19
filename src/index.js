@@ -24,6 +24,10 @@ function generateStory(event) {
   Ensure proper spacing and formatting for easy readability.`;
   let prompt = `User Instructions: Generate ${userInstructions.value}`;
   let apiURL = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
+
+  let storyElement = document.querySelector("#generated-story");
+  storyElement.classList.remove("hidden");
+  storyElement.innerHTML = `Generating your story<span class="blink">🔵</span><span class="blink">🔵</span><span class="blink">🔵</span>`;
   //Make a call to API
   axios.get(apiURL).then(displayStory);
   //Display generated story

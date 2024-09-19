@@ -1,27 +1,30 @@
 body {
   margin: 0;
   padding: 0;
-  height: 100vh;
+
   font-family: "Comic Sans MS", cursive sans-serif;
   background: linear-gradient(
     68.6deg,
     rgb(252, 165, 241) 1.8%,
     rgb(181, 255, 255) 100.5%
   );
-  background-size: auto;
+  background-size: cover;
   animation: gradientMove 5s infinite;
   height: 100vh;
 }
 @keyframes gradientMove {
   0% {
-    background-position: 100% 100%;
+    background-position: 0% 0%;
   }
   50% {
     background-position: 100% 100%;
   }
   100% {
-    background-position: 100% 100%;
+    background-position: 0% 0%;
   }
+}
+h1 {
+  text-align: center;
 }
 footer {
   text-align: center;
@@ -34,12 +37,11 @@ footer {
 #form-details-container {
   display: flex;
   align-items: center;
-  border: 1px solid #caf9e8;
+  border: 3px solid #caf9e8;
   border-radius: 30px;
   padding: 10px;
   width: 100%;
   max-width: 600px;
-  background-color: #caf9e8;
 }
 
 #chat-input {
@@ -47,7 +49,11 @@ footer {
   border: none;
   background: none;
   outline: none;
-  font-size: 16px;
+  font-size: 14px;
+}
+#chat-input::placeholder {
+  font-family: "Comic Sans MS", cursive sans-serif;
+  color: #1b331c;
 }
 #container {
   margin: 120px auto;
@@ -69,9 +75,23 @@ footer {
   background-color: whitesmoke;
   border-radius: 10px;
   padding: 20px;
-  display: block;
   margin: 0 auto;
   width: 96%;
   border-right: 2px solid rgb(249, 147, 164);
   border-left: 2px solid rgb(249, 147, 164);
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.blink {
+  animation: blink 1s step-start 0s infinite;
+  font-size: 4px;
 }
