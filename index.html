@@ -5,27 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AI Kids' Story Generator</title>
     <link rel="stylesheet" href="src/style.css" />
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
   </head>
   <body>
     <main id="container">
       <h1>AI Kids' Biblical Short Story Generator</h1>
-      <form>
+      <form id="story-generator-form">
         <div id="form-details-container">
           <input
             type="text"
             name="message"
             id="chat-input"
             placeholder="Type a message..."
+            autocomplete="off"
             required
           />
           <input type="submit" id="submit" value="✔" />
         </div>
       </form>
       <br />
-      <div id="generated-story">
-        <strong id="story heading">Story Heading</strong> <br />
-        <span id="story">project was coded by</span>
-      </div>
+      <div id="generated-story"></div>
     </main>
     <footer>
       This project was coded by
