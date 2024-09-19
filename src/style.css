@@ -9,17 +9,18 @@ body {
     rgb(181, 255, 255) 100.5%
   );
   background-size: auto;
-  animation: gradientMove 8s infinite;
+  animation: gradientMove 5s infinite;
+  height: 100vh;
 }
 @keyframes gradientMove {
   0% {
-    background-position: 50% 50%;
+    background-position: 100% 100%;
   }
   50% {
-    background-position: 50% 50%;
+    background-position: 100% 100%;
   }
   100% {
-    background-position: 50% 50%;
+    background-position: 100% 100%;
   }
 }
 footer {
