@@ -1,0 +1,75 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  font-family: "Comic Sans MS", cursive sans-serif;
+  background: linear-gradient(
+    68.6deg,
+    rgb(252, 165, 241) 1.8%,
+    rgb(181, 255, 255) 100.5%
+  );
+  background-size: auto;
+  animation: gradientMove 8s infinite;
+}
+@keyframes gradientMove {
+  0% {
+    background-position: 50% 50%;
+  }
+  50% {
+    background-position: 50% 50%;
+  }
+  100% {
+    background-position: 50% 50%;
+  }
+}
+footer {
+  text-align: center;
+}
+.form-details {
+  display: flex;
+  align-content: space-around;
+}
+
+#form-details-container {
+  display: flex;
+  align-items: center;
+  border: 1px solid #caf9e8;
+  border-radius: 30px;
+  padding: 10px;
+  width: 100%;
+  max-width: 600px;
+  background-color: #caf9e8;
+}
+
+#chat-input {
+  flex-grow: 1;
+  border: none;
+  background: none;
+  outline: none;
+  font-size: 16px;
+}
+#container {
+  margin: 120px auto;
+  max-width: 600px;
+}
+
+#submit {
+  background-color: #1b331c;
+  color: white;
+  border: none;
+  padding: 8px 13px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 18px;
+  margin-left: 10px;
+}
+
+#generated-story {
+  background-color: whitesmoke;
+  border-radius: 10px;
+  padding: 10px;
+  width: 100%;
+  border-right: 2px solid rgb(249, 147, 164);
+  border-left: 2px solid  rgb(249, 147, 164);
+  display: none;
+}
